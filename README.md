@@ -54,7 +54,6 @@ CPU: 4+ cores, 3.3+ GHz/core
 The runtimes below are generated using a computer with the recommended specs (16 GB RAM, 4 cores@3.3 GHz) and internet of speed 25 Mbps.
 
 
-
 # Installation Guide
 
 ## Instructions
