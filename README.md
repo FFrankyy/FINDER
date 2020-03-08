@@ -20,7 +20,7 @@ Finding an optimal set of nodes, called key players, whose activation (or remova
 
 # Repo Contents
 
-- [code](./code): source code of FINDER for the following scenarios in the paper.
+- [code](./code): source code of FINDER for the following four cases in the paper.
      - [FINDER_CN](./code/FINDER_CN): source code for the Critical Node (CN) problem under the node-unweighted scenario.
      - [FINDER_CN_cost](./code/FINDER_CN_cost): source code for the Critical Node (CN) problem under the node-weighted (including degree-based costs and random costs) scenarios.
      - [FINDER_ND](./code/FINDER_ND): source code for the Network Dismantling (ND) problem under the node-unweighted scenario.
@@ -59,7 +59,7 @@ The pip package should be compatible with Windows, and Linux operating systems.
 Before setting up the FINDER users should have `gcc` version 7.4.0 or higher.
 
 ### Installing gcc version 7.4.0 on Ubuntu 18.04
-the latest version of gcc can be installed by adding the latest repository to `apt`:
+The latest version of gcc can be installed by adding the latest repository to `apt`:
 ```
 sudo apt-get update
 sudo apt-get install gcc
@@ -67,7 +67,7 @@ sudo apt-get install gcc
 which should install in several seconds.
 
 ## Hardware Requirements
-The `FINDER` model requires a standard computer with enough RAM and GPU to support the operations defined by a user. For minimal performance, this will be a computer with about 2 GB of RAM and 16GB of GPU. For optimal performance, we recommend a computer with the following specs:
+The `FINDER` model requires a standard computer with enough RAM and GPU to support the operations defined by a user. For minimal performance, this will be a computer with about 4 GB of RAM and 16GB of GPU. For optimal performance, we recommend a computer with the following specs:
 
 RAM: 16+ GB  
 CPU: 4+ cores, 3.3+ GHz/core
@@ -112,17 +112,17 @@ CUDA_VISIBLE_DEVICES=-1 python testReal.py (do not use GPU for test)
 ```
 Using the well-trained model (stored in `./models`), you can obtain the results reported in the paper.
 
-Actually, you can go into the `run` file, and click `Reproducible Run` to obtain all the synthetic and real results in the paper.
+Note that for the sake of convenience, you can go into the `run` file, and click `Reproducible Run` to obtain all the synthetic and real results in the paper.
 
 ## Expected output
-The experimental results are saved in the `results` folder, each model corresponds to one model, and the synthetic and real results are separated into two different subfolders for the sake of clearity.
+The experimental results are saved in the `results` folder, which contains four subfolders, each of which corresponds to one model, and the synthetic and real results are separated into two different subfolders for the sake of clearity.
 
 ## Expected run time
- It took about 17 hours to obtain all results, including 'FINDER_CN', 'FINDER_CN_cost', 'FINDER_ND' and 'FINDER_ND_cost' four models, on both synthetic data and real data, containing both node uniform weights, degree-based weights and random weights.
+It took about 17 hours to obtain all results, including 'FINDER_CN', 'FINDER_CN_cost', 'FINDER_ND' and 'FINDER_ND_cost' four models, on both synthetic data and real data, containing both node uniform weights, degree-based weights and random weights.
 
 
 # Basebline methods implementation
-We compare with HDA, HBA, HCA, HPRA, CI, MinSum, BPD, GND, RatioCut, which are state-of-the-art baselines for network key players finding methods.
+We compared with HDA, HBA, HCA, HPRA, CI, MinSum, BPD, GND and RatioCut, which are state-of-the-art baselines for network key players finding methods.
 
 We ran HDA, HBA, HCA, and HPRA with Networkx 2.0, and for HDA in large real-world networks, we instead used SNAP, a general-purpose, high-performance system for graph analysis. 
 ```
