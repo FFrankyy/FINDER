@@ -1,4 +1,4 @@
-# FINDER (<u>FI</u> nding key players in complex <u>N</u>etworks through <u>DE</u>ep <u>R</u>einforcement learning)
+# **FINDER** (**FI**nding key players in complex **N**etworks through **DE**ep **R**einforcement learning)
 
 
 ## Contents
