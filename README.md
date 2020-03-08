@@ -7,9 +7,8 @@
 - [Repo Contents](#repo-contents)
 - [System Requirements](#system-requirements)
 - [Installation Guide](#installation-guide)
-- [Reproduction instructions](#Reproduction instructions)
-- [Results](#results)
-- [License](./LICENSE)
+- [Reproduction instructions](#demo)
+- [Basebline methods implementation](#results)
 
 # Overview
 
