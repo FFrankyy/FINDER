@@ -16,9 +16,9 @@ Finding an optimal set of nodes, called key players, whose activation (or remova
 
 # Repo Contents
 
-- [code]: including 'FINDER_CN', 'FINDER_CN_cost', 'FINDER_ND' and 'FINDER_ND_cost', four agents to reproduce the results reported in the manuscripte. 
-- [data]: including synthetic data and real data used in the paper.
-- [environment]: including the Docerfile, which can be directly used if using docker environment.
+- [code](./code): including 'FINDER_CN', 'FINDER_CN_cost', 'FINDER_ND' and 'FINDER_ND_cost', four agents to reproduce the results reported in the manuscripte. 
+- [data](./data): including synthetic data and real data used in the paper.
+- [environment](./environment): including the Docerfile, which can be directly used if using docker environment.
 
 
 
