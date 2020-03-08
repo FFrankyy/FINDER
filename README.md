@@ -7,7 +7,7 @@
 - [Repo Contents](#repo-contents)
 - [System Requirements](#system-requirements)
 - [Installation Guide](#installation-guide)
-- [Demo](#demo)
+- [Reproduction instructions](#Reproduction instructions)
 - [Results](#results)
 - [License](./LICENSE)
 
