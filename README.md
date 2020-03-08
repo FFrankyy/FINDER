@@ -1,4 +1,4 @@
-# FINDER (FInding key players in complex Networks through DEep Reinforcement learning)
+# FINDER (<u>FI</u>nding key players in complex <u>N</u>etworks through <u>DE</u>ep <u>R</u>einforcement learning)
 
 
 ## Contents
