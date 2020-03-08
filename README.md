@@ -110,28 +110,25 @@ The experimental results are saved in the `results` folder.
 # Basebline methods implementation
 We compare with HDA, HBA, HCA, HPRA, CI, MinSum, BPD, GND, RatioCut, which are state-of-the-art baselines for network key players finding methods.
 
-We ran HDA, HBA, HCA, and HPRA with Networkx 2.0, and for HDA in large real-world networks, we instead used SNAP, 
+We ran HDA, HBA, HCA, and HPRA with Networkx 2.0, and for HDA in large real-world networks, we instead used SNAP, a general-purpose, high-performance system for graph analysis. 
 ```
-http://snap.stanford.edu/snap/}
+http://snap.stanford.edu/snap 
 ```
-a general-purpose, high-performance system for graph analysis. For CI:
-```
-https://github.com/zhfkt/ComplexCi}
-```
-MinSum:
-```
-https://github.com/abraunst/decycler
-```
-BPD:
-```
-http://power.itp.ac.cn/~zhouhj/codes.html
-```
-CoreHD:
-```
-https://github.com/hcmidt/corehd
-```
-GND:
-```
-https://github.com/renxiaolong/Generalized-Network-Dismantling
-```
+
 We used the source codes released online, and adopted the best parameter settings for each method. For RatioCut, we modified the traditional RatioCut method based on the GND implementation.
+```
+https://github.com/zhfkt/ComplexCi (CI)
+```
+```
+https://github.com/abraunst/decycler (MinSum)
+```
+```
+http://power.itp.ac.cn/~zhouhj/codes.html (BPD)
+```
+```
+https://github.com/hcmidt/corehd (CoreHD)
+```
+```
+https://github.com/renxiaolong/Generalized-Network-Dismantling (GND and RatioCut)
+```
+
