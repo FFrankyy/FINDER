@@ -36,6 +36,8 @@ Finding an optimal set of nodes, called key players, whose activation (or remova
 
 ## Software dependencies and operating systems
 
+### Software dependencies
+
 Users should install the following packages first, which will install in about 5 minutes on a machine with the recommended specs. The versions of software are, specifically:
 ```
 cython==0.29.13 
@@ -47,17 +49,30 @@ tensorflow-gpu==1.14.0
 tqdm==4.36.1
 ```
 
-The developmental version of the package has been tested on the following systems:
+### Operating systems
+The package development version is tested on *Linux and Windows 10* operating systems. The developmental version of the package has been tested on the following systems:
 
-Linux: Ubuntu 16.04  
-Windows:  10
+Linux: Ubuntu 18.04  
+Windows: 10
+
+The pip package should be compatible with Windows, and Linux operating systems.
+
+Before setting up the FINDER users should have `gcc` version 7.4.0 or higher.
+
+#### Installing gcc version 7.4.0 on Ubuntu 18.04
+the latest version of gcc can be installed by adding the latest repository to `apt`:
+```
+sudo apt-get update
+sudo apt-get install gcc
+```
+which should install in several seconds.
 
 ## Hardware Requirements
-
-`FINDER` requires only a standard computer with enough RAM to support the operations defined by a user. For minimal performance, this will be a computer with about 10 GB of RAM. For optimal performance, we recommend a computer with the following specs:
+The `FINDER` model requires a standard computer with enough RAM and GPU to support the operations defined by a user. For minimal performance, this will be a computer with about 2 GB of RAM and 16GB of GPU. For optimal performance, we recommend a computer with the following specs:
 
 RAM: 16+ GB  
 CPU: 4+ cores, 3.3+ GHz/core
+GPU: 16+ GB
 
 The runtimes below are generated using a computer with the recommended specs (16 GB RAM, 4 cores@3.3 GHz) and internet of speed 25 Mbps.
 
@@ -101,7 +116,7 @@ Using the well-trained model (stored in `./models`), you can obtain the results 
 Actually, you can go into the `run` file, and click `Reproducible Run` to obtain all the synthetic and real results in the paper.
 
 ## Expected output
-The experimental results are saved in the `results` folder.
+The experimental results are saved in the `results` folder, each model corresponds to one model, and the synthetic and real results are separated into two different subfolders for the sake of clearity.
 
 ## Expected run time
  It took about 17 hours to obtain all results, including 'FINDER_CN', 'FINDER_CN_cost', 'FINDER_ND' and 'FINDER_ND_cost' four models, on both synthetic data and real data, containing both node uniform weights, degree-based weights and random weights.
