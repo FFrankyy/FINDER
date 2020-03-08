@@ -59,7 +59,7 @@ The pip package should be compatible with Windows, and Linux operating systems.
 
 Before setting up the FINDER users should have `gcc` version 7.4.0 or higher.
 
-#### Installing gcc version 7.4.0 on Ubuntu 18.04
+### Installing gcc version 7.4.0 on Ubuntu 18.04
 the latest version of gcc can be installed by adding the latest repository to `apt`:
 ```
 sudo apt-get update
