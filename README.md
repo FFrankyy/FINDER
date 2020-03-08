@@ -7,8 +7,8 @@
 - [Repo Contents](#repo-contents)
 - [System Requirements](#system-requirements)
 - [Installation Guide](#installation-guide)
-- [Reproduction instructions](#demo)
-- [Basebline methods implementation](#results)
+- [Reproduction instructions](#reproduction-instructions)
+- [Basebline methods implementation](#basebline-methods-implementation)
 
 # Overview
 
@@ -26,7 +26,7 @@ Finding an optimal set of nodes, called key players, whose activation (or remova
 
 ## Software dependencies and operating systems
 
-Users should install the following packages first, which will install in about 30 seconds on a machine with the recommended specs.
+Users should install the following packages first, which will install in about 5 minutes on a machine with the recommended specs.
 
 The versions of software are, specifically:
 ```
@@ -39,7 +39,7 @@ tensorflow-gpu==1.14.0
 tqdm==4.36.1
 ```
 
-The package development version is tested on *Linux* or *Windows* operating systems. The developmental version of the package has been tested on the following systems:
+The developmental version of the package has been tested on the following systems:
 
 Linux: Ubuntu 16.04  
 Windows:  10
@@ -57,17 +57,22 @@ The runtimes below are generated using a computer with the recommended specs (16
 # Installation Guide
 
 ## Instructions
-
+1. First install the required packages, which are contained in the requirements.txt file
 ```
-python setup.py built_ext -i
+pip install -r requirements.txt
+```
+2. Make all the file
+```
+python setup.py build_ext -i
 ```
 
 ## Typical install time
-
+It took about 5 mins to install all the required packages, and about 1 mins to make all the files
 
 # Reproduction instructions
 
 ## Instructions to run on data
+1. To train all the model
 
 ### Train
 
