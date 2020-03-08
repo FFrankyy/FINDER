@@ -26,9 +26,7 @@ Finding an optimal set of nodes, called key players, whose activation (or remova
 
 ## Software dependencies and operating systems
 
-Users should install the following packages first, which will install in about 5 minutes on a machine with the recommended specs.
-
-The versions of software are, specifically:
+Users should install the following packages first, which will install in about 5 minutes on a machine with the recommended specs. The versions of software are, specifically:
 ```
 cython==0.29.13 
 networkx==2.3 
@@ -72,20 +70,58 @@ It took about 5 mins to install all the required packages, and about 1 mins to m
 # Reproduction instructions
 
 ## Instructions to run on data
-1. To train all the model
+1. To train each agent, 
+```
+CUDA_VISIBLE_DEVICES=gpu_id python train.py
+```
+Modify the hyper-paramters in `GraphDQN.pyx` to tune the model, and make files after the the modification.
 
-### Train
+2. Test synthetic data,
+```
+CUDA_VISIBLE_DEVICES=-1 python testSynthetic.py (do not use GPU for test)
+```
+Using the well-trained model (stored in `./models`), you can obtain the results reported in the paper.
 
-### Test synthetic data
+3. Test real data,
+```
+CUDA_VISIBLE_DEVICES=-1 python testReal.py (do not use GPU for test)
+```
+Using the well-trained model (stored in `./models`), you can obtain the results reported in the paper.
 
-### Test real data
-
+Actually, you can go into the `run` file, and click `Reproducible Run` to obtain all the synthetic and real results in the paper.
 
 ## Expected output
+The experimental results are saved in the `results` folder.
 
 ## Expected run time
-
+ It took about 17 hours to obtain all results, including 'FINDER_CN', 'FINDER_CN_cost', 'FINDER_ND' and 'FINDER_ND_cost' four models, on both synthetic data and real data, containing both node uniform weights, degree-based weights and random weights.
 
 
 # Basebline methods implementation
+We compare with HDA, HBA, HCA, HPRA, CI, MinSum, BPD, GND, RatioCut, which are state-of-the-art baselines for network key players finding methods.
 
+We ran HDA, HBA, HCA, and HPRA with Networkx 2.0, and for HDA in large real-world networks, we instead used SNAP, 
+```
+http://snap.stanford.edu/snap/}
+```
+a general-purpose, high-performance system for graph analysis. For CI:
+```
+https://github.com/zhfkt/ComplexCi}
+```
+MinSum:
+```
+https://github.com/abraunst/decycler
+```
+BPD:
+```
+http://power.itp.ac.cn/~zhouhj/codes.html
+```
+CoreHD:
+```
+https://github.com/hcmidt/corehd
+```
+GND:
+```
+https://github.com/renxiaolong/Generalized-Network-Dismantling
+```
+We used the source codes released online, and adopted the best parameter settings for each method. For RatioCut, we modified the traditional RatioCut method based on the GND implementation.
