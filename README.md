@@ -133,17 +133,9 @@ http://snap.stanford.edu/snap
 We used the source codes released online, and adopted the best parameter settings for each method. For RatioCut, we modified the traditional RatioCut method based on the GND implementation.
 ```
 https://github.com/zhfkt/ComplexCi (CI)
-```
-```
 https://github.com/abraunst/decycler (MinSum)
-```
-```
 http://power.itp.ac.cn/~zhouhj/codes.html (BPD)
-```
-```
 https://github.com/hcmidt/corehd (CoreHD)
-```
-```
 https://github.com/renxiaolong/Generalized-Network-Dismantling (GND and RatioCut)
 ```
 
