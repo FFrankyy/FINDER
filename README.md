@@ -1,6 +1,6 @@
 # FINDER (FInding key players in complex Networks through DEep Reinforcement learning)
 
-This is a TensorFlow implementation of FINDER, as described in our paper under peer review:
+This is a TensorFlow implementation of FINDER, as described in our paper under peer review (to be updated):
 
 Changjun Fan and Li Zeng, Yizhou Sun and Yang-Yu Liu[[Finding Key Players in Complex  Networks through Deep Reinforcement Learning]](#) (Nature Machine Intelligence)
 
