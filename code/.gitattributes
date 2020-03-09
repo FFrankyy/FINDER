@@ -1,0 +1,3 @@
+*.code linguist-language=Tensorflow
+*.data linguist-language=Tensorflow
+*.environment linguist-language=Tensorflow
