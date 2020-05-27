@@ -58,14 +58,6 @@ The pip package should be compatible with Windows, and Linux operating systems.
 
 Before setting up the FINDER users should have `gcc` version 7.4.0 or higher.
 
-### Installing gcc version 7.4.0 on Ubuntu 18.04
-The latest version of gcc can be installed by adding the latest repository to `apt`:
-```
-sudo apt-get update
-sudo apt-get install gcc
-```
-which should install in several seconds.
-
 ## Hardware Requirements
 The `FINDER` model requires a standard computer with enough RAM and GPU to support the operations defined by a user. For minimal performance, this will be a computer with about 4 GB of RAM and 16GB of GPU. For optimal performance, we recommend a computer with the following specs:
 
