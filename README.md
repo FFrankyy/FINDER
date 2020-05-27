@@ -104,7 +104,6 @@ CUDA_VISIBLE_DEVICES=-1 python testReal.py (do not use GPU for test)
 ```
 Using the well-trained model (stored in `./models`), you can obtain the results reported in the paper.
 
-Note that for the sake of convenience, you can go into the `run` file, and click `Reproducible Run` to obtain all the synthetic and real results in the paper.
 
 ## Expected output
 The experimental results are saved in the `results` folder, which contains four subfolders, each of which corresponds to one model, and the synthetic and real results are separated into two different subfolders for the sake of clearity.
