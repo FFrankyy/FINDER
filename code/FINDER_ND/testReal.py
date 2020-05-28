@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import sys,os
 sys.path.append(os.path.dirname(__file__) + os.sep + '../')
-from GraphDQN import GraphDQN
+from FINDER import FINDER
 import numpy as np
 from tqdm import tqdm
 import time
@@ -15,7 +15,7 @@ import graph
 def GetSolution(STEPRATIO, MODEL_FILE_CKPT):
     ######################################################################################################################
     ##................................................Get Solution (model).....................................................
-    dqn = GraphDQN()
+    dqn = FINDER()
     data_test_path = '../data/real/'
 #     data_test_name = ['Crime','HI-II-14','Digg','Enron','Gnutella31','Epinions','Facebook','Youtube','Flickr']
     data_test_name = ['Crime','HI-II-14']
@@ -49,7 +49,7 @@ def GetSolution(STEPRATIO, MODEL_FILE_CKPT):
 def EvaluateSolution(STEPRATIO, MODEL_FILE_CKPT, STRTEGYID):
     #######################################################################################################################
     ##................................................Evaluate Solution.....................................................
-    dqn = GraphDQN()
+    dqn = FINDER()
     data_test_path = '../data/real/'
 #     data_test_name = ['Crime', 'HI-II-14', 'Digg', 'Enron', 'Gnutella31', 'Epinions', 'Facebook', 'Youtube', 'Flickr']
     data_test_name = ['Crime', 'HI-II-14']
