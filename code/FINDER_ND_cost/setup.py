@@ -15,6 +15,6 @@ setup(
                     Extension('nstep_replay_mem', sources=['./FINDER_ND_cost/nstep_replay_mem.pyx', './FINDER_ND_cost/src/lib/nstep_replay_mem.cpp', './FINDER_ND_cost/src/lib/graph.cpp', './FINDER_ND_cost/src/lib/mvc_env.cpp', './FINDER_ND_cost/src/lib/disjoint_set.cpp'], language='c++',extra_compile_args=['-std=c++11']),
                     Extension('nstep_replay_mem_prioritized',sources=['./FINDER_ND_cost/nstep_replay_mem_prioritized.pyx', './FINDER_ND_cost/src/lib/nstep_replay_mem_prioritized.cpp','./FINDER_ND_cost/src/lib/graph.cpp', './FINDER_ND_cost/src/lib/mvc_env.cpp', './FINDER_ND_cost/src/lib/disjoint_set.cpp'], language='c++',extra_compile_args=['-std=c++11']),
                     Extension('graph_struct', sources=['./FINDER_ND_cost/graph_struct.pyx', './FINDER_ND_cost/src/lib/graph_struct.cpp'], language='c++',extra_compile_args=['-std=c++11']),
-                    Extension('GraphDQN', sources = ['./FINDER_ND_cost/GraphDQN.pyx'])
+                    Extension('FINDER', sources = ['./FINDER_ND_cost/FINDER.pyx'])
                    ])
 
