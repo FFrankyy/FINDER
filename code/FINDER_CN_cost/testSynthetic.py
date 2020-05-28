@@ -2,13 +2,13 @@
 # -*- coding: utf-8 -*-
 import sys,os
 sys.path.append(os.path.dirname(__file__) + os.sep + '../')
-from GraphDQN import GraphDQN
+from FINDER import FINDER
 from tqdm import tqdm
 
 
 
 def main():
-    dqn = GraphDQN()
+    dqn = FINDER()
     cost_types = ['degree_cost', 'random_cost']
     for cost in cost_types:
         data_test_path = '../data/synthetic/%s/'%cost
