@@ -89,7 +89,7 @@ It took about 5 mins to install all the required packages, and about 1 mins to m
 ```
 CUDA_VISIBLE_DEVICES=gpu_id python train.py
 ```
-Modify the hyper-parameters in `GraphDQN.pyx` to tune the model, and make files after the the modification.
+Modify the hyper-parameters in `FINDER.pyx` to tune the model, and make files after the the modification.
 
 2. Test synthetic data,
 ```
