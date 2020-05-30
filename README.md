@@ -2,7 +2,7 @@
 
 This is a TensorFlow implementation of FINDER, as described in our paper:
 
-Fan, C., Zeng, L., Sun, Y and Liu Y-Y. [Finding key players in complex networks through deep reinforcement learning](https://github.com/FFrankyy/FINDER/blob/master/paper/NMI-online.pdf). Nat Mach Intell (2020). ![demo](https://github.com/FFrankyy/FINDER/blob/master/paper/FINDER-Overview.jpg)
+Fan, C., Zeng, L., Sun, Y and Liu Y-Y. [Finding key players in complex networks through deep reinforcement learning](https://www.nature.com/articles/s42256-020-0177-2.epdf?sharing_token=0CAxnrCP1THxBEtK2mS5c9RgN0jAjWel9jnR3ZoTv0O3ej6g4eVo3V4pnngJO-QMH375GbplyUstNSGUaq-zMyAnpSrZIOiiDvB0V_CqsCipIfCq-enY3sK3Uv_D_4b4aRn6lYXd8HEinWjLNM42tQZ0iVjeMBl6ZRA7D7WUBjM%3D). Nat Mach Intell (2020). ![demo](https://github.com/FFrankyy/FINDER/blob/master/paper/FINDER-Overview.jpg)
 
 ## Contents
 
