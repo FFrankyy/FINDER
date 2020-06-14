@@ -427,17 +427,17 @@ class FINDER:
         print('\ngenerating validation graphs...')
         sys.stdout.flush()
         cdef double result_degree = 0.0
-        #cdef double result_betweeness = 0.0
+        cdef double result_betweeness = 0.0
 
         for i in tqdm(range(n_valid)):
             g = self.gen_graph(NUM_MIN, NUM_MAX)
             g_degree = g.copy()
-           # g_betweenness = g.copy()
+            g_betweenness = g.copy()
             result_degree += self.HXA(g_degree,'HDA')
-           # result_betweeness += self.betweenessDisrupt(g_betweenness)
+            result_betweeness += self.HXA(g_betweenness,'HBA')
             self.InsertGraph(g, is_test=True)
-        print ('Validation of DegreeGreedy: %.16f'%(result_degree / n_valid))
-       # print ('Validation of BetweenessGreedy: %.16f'%(result_betweeness / n_valid))
+        print ('Validation of HDA: %.16f'%(result_degree / n_valid))
+        print ('Validation of HBA: %.16f'%(result_betweeness / n_valid))
 
 
 
@@ -663,7 +663,7 @@ class FINDER:
         cdef int loss = 0
         cdef double frac, start, end
 
-        save_dir = './models/Model_%s/Model_%d_%d'%(self.g_type, NUM_MIN, NUM_MAX)
+        save_dir = './models/Model_%s'%(self.g_type)
         if not os.path.exists(save_dir):
             os.mkdir(save_dir)
         VCFile = '%s/ModelVC_%d_%d.csv'%(save_dir, NUM_MIN, NUM_MAX)
@@ -881,7 +881,7 @@ class FINDER:
         edges = g.edges()
         weights = []
         for i in range(len(nodes)):
-            weights.append(g.node[str(i)]['weight'])
+            weights.append(g.node[i]['weight'])
         if len(edges) > 0:
             a, b = zip(*edges)
             A = np.array(a)
@@ -893,6 +893,29 @@ class FINDER:
             W = np.array([0])
         return graph.py_Graph(len(nodes), len(edges), A, B, W)
 
+    def HXA(self, g, method):
+        # 'HDA', 'HBA', 'HPRA', 'HCA'
+        sol = []
+        G = g.copy()
+        while (nx.number_of_edges(G)>0):
+            if method == 'HDA':
+                dc = nx.degree_centrality(G)
+            elif method == 'HBA':
+                dc = nx.betweenness_centrality(G)
+            elif method == 'HCA':
+                dc = nx.closeness_centrality(G)
+            elif method == 'HPRA':
+                dc = nx.pagerank(G)
+            keys = list(dc.keys())
+            values = list(dc.values())
+            maxTag = np.argmax(values)
+            node = keys[maxTag]
+            sol.append(node)
+            G.remove_node(node)
+        solution = sol + list(set(g.nodes())^set(sol))
+        solutions = [int(i) for i in solution]
+        Robustness = self.utils.getRobustness(self.GenNetwork(g), solutions)
+        return Robustness
 
     def argMax(self, scores):
         cdef int n = len(scores)
