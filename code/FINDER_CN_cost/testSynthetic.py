@@ -12,9 +12,8 @@ def main():
     cost_types = ['degree_cost', 'random_cost']
     for cost in cost_types:
         data_test_path = '../data/synthetic/%s/'%cost
-#         data_test_name = ['30-50', '50-100', '100-200', '200-300', '300-400', '400-500']
-        data_test_name = ['30-50', '50-100']
-        model_file = './FINDER_CN_cost/models/nrange_30_50_iter_122100.ckpt'        
+        data_test_name = ['30-50', '50-100', '100-200', '200-300', '300-400', '400-500']
+        model_file = './models/nrange_30_50_iter_122100.ckpt'
         
         file_path = '../results/FINDER_CN_cost/synthetic'
         if not os.path.exists('../results/FINDER_CN_cost'):

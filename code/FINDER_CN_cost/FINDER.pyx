@@ -419,8 +419,8 @@ class FINDER:
             result_degree += self.HXA(g_degree,'HDA')
             result_betweeness += self.HXA(g_betweenness, 'HBA')
             self.InsertGraph(g, is_test=True)
-        print ('Validation of DegreeGreedy: %.16f'%(result_degree / n_valid))
-        print ('Validation of BetweenessGreedy: %.16f'%(result_betweeness / n_valid))
+        print ('Validation of HDA: %.16f'%(result_degree / n_valid))
+        print ('Validation of HBA: %.16f'%(result_betweeness / n_valid))
 
 
     def Run_simulator(self, int num_seq, double eps, TrainSet, int n_step):
@@ -1007,7 +1007,7 @@ class FINDER:
         edges = g.edges()
         weights = []
         for i in range(len(nodes)):
-            weights.append(g.node[str(i)]['weight'])
+            weights.append(g.node[i]['weight'])
         if len(edges) > 0:
             a, b = zip(*edges)
             A = np.array(a)
