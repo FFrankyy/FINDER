@@ -62,7 +62,7 @@ class FINDER:
         # init some parameters
         self.embedding_size = EMBEDDING_SIZE
         self.learning_rate = LEARNING_RATE
-        self.g_type = 'powerlaw' #erdos_renyi, powerlaw, small-world
+        self.g_type = 'barabasi_albert' #erdos_renyi, powerlaw, small-world， barabasi_albert
         self.TrainSet = graph.py_GSet()
         self.TestSet = graph.py_GSet()
         self.inputs = dict()
@@ -73,11 +73,7 @@ class FINDER:
         self.IsHuberloss = False
         self.IsDoubleDQN = False
         self.IsPrioritizedSampling = False
-        self.IsDuelingDQN = False
         self.IsMultiStepDQN = True     ##(if IsNStepDQN=False, N_STEP==1)
-        self.IsDistributionalDQN = False
-        self.IsNoisyNetDQN = False
-        self.Rainbow = False
 
         ############----------------------------- variants of DQN(end) ------------------- ###################################
         #Simulator
@@ -612,7 +608,7 @@ class FINDER:
         cdef double frac, start, end
 
         #save_dir = './models/%s'%self.g_type
-        save_dir = './FINDER_ND/models/Model_powerlaw'
+        save_dir = './models/Model_powerlaw'
         if not os.path.exists(save_dir):
             os.mkdir(save_dir)
         VCFile = '%s/ModelVC_%d_%d.csv'%(save_dir, NUM_MIN, NUM_MAX)
@@ -652,14 +648,14 @@ class FINDER:
 
 
     def findModel(self):
-        VCFile = './FINDER_ND/models/%s/ModelVC_%d_%d.csv'%(self.g_type, NUM_MIN, NUM_MAX)
+        VCFile = './models/%s/ModelVC_%d_%d.csv'%(self.g_type, NUM_MIN, NUM_MAX)
         vc_list = []
         for line in open(VCFile):
             vc_list.append(float(line))
         start_loc = 33
         min_vc = start_loc + np.argmin(vc_list[start_loc:])
         best_model_iter = 300 * min_vc
-        best_model = './FINDER_ND/models/%s/nrange_%d_%d_iter_%d.ckpt' % (self.g_type, NUM_MIN, NUM_MAX, best_model_iter)
+        best_model = './models/%s/nrange_%d_%d_iter_%d.ckpt' % (self.g_type, NUM_MIN, NUM_MAX, best_model_iter)
         return best_model
 
     def Evaluate1(self, g, save_dir, model_file=None):

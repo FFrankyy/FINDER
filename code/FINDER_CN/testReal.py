@@ -1,15 +1,10 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
-import sys,os
-sys.path.append(os.path.dirname(__file__) + os.sep + '../')
+
 from FINDER import FINDER
 import numpy as np
-from tqdm import tqdm
 import time
-import networkx as nx
 import pandas as pd
-import pickle as cp
-import graph
 
 
 def GetSolution(STEPRATIO, MODEL_FILE_CKPT):
