@@ -606,7 +606,7 @@ class FINDER:
         cdef int loss = 0
         cdef double frac, start, end
 
-        save_dir = './models/'
+        save_dir = './models/Model_%s'%(self.g_type)
         if not os.path.exists(save_dir):
             os.mkdir(save_dir)
         VCFile = '%s/ModelVC_%d_%d.csv'%(save_dir, NUM_MIN, NUM_MAX)
@@ -638,6 +638,8 @@ class FINDER:
                 N_end = time.clock()
                 print ('300 iterations total time: %.2fs\n'%(N_end-N_start))
                 sys.stdout.flush()
+                model_path = '%s/nrange_%d_%d_iter_%d.ckpt' % (save_dir, NUM_MIN, NUM_MAX, iter)
+                self.SaveModel(model_path)
             if iter % UPDATE_TIME == 0:
                 self.TakeSnapShot()
             self.Fit()
