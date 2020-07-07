@@ -135,11 +135,14 @@ https://drive.google.com/open?id=1HAxIUsgOPYXHDikmlTIKIXunGWWLXbr2
 
 Please cite our work if you find our code/paper is useful to your work. 
 
-    @article{fannmi,
-      title={Finding key players in complex networks through deep reinforcement learning},
-      author={Fan, Changjun and Zeng, Li and Sun, Yizhou and Liu, Yang-Yu},
-      journal={Nature Machine Intelligence},
-      year={2020}
-    }
+    @article{fan2020finding,
+       title={Finding key players in complex networks through deep reinforcement learning},
+       author={Fan, Changjun and Zeng, Li and Sun, Yizhou and Liu, Yang-Yu},
+       journal={Nature Machine Intelligence},
+       pages={1--8},
+       year={2020},
+       publisher={Nature Publishing Group}
+     }
+
 
 
