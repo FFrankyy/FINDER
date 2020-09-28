@@ -821,6 +821,10 @@ class FINDER:
         print('restore model from file successfully')
 
     def GenNetwork(self, g):    #networkx2four
+        mapping = {}
+        for i, j in zip(sorted(g), [sorted(g).index(i) for i in sorted(g)]):
+            mapping[i] = j
+        g = nx.relabel_nodes(g, mapping)
         edges = g.edges()
         if len(edges) > 0:
             a, b = zip(*edges)
