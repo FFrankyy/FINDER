@@ -1003,6 +1003,10 @@ class FINDER:
 
 
     def GenNetwork(self, g):    #networkx2four
+        mapping = {}
+        for i, j in zip(sorted(g), [sorted(g).index(i) for i in sorted(g)]):
+            mapping[i] = j
+        g = nx.relabel_nodes(g, mapping)
         nodes = g.nodes()
         edges = g.edges()
         weights = []
